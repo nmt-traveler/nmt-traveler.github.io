@@ -4,7 +4,7 @@
 const CONFIG = {
   // Your GitHub username. Leave it "" if you don't have one yet —
   // the page will then use the sample projects below.
-  githubUsername: "Tuan Nguyen Manh",
+  githubUsername: "nmt-traveler",
 
   name: "Tuan Nguyen",
   username: "tuan-dev",
@@ -12,7 +12,7 @@ const CONFIG = {
   // Leave it "" to show a generated avatar with your initials.
   avatar: "",
   bio: "Learning web development 🚀 Curious about how things work.",
-  followLink: "https://github.com/",
+  followLink: "https://github.com/nmt-traveler",
 
   info: [
     "📍 Vietnam",
