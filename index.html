@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="logo">&lt;/&gt;</span>
+      <span class="topbar-user" id="topbar-user">username</span>
+    </div>
+    <button class="theme-btn" id="theme-btn" title="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs">
+    <button class="tab active" data-tab="overview">📖 Overview</button>
+    <button class="tab" data-tab="repos">📦 Repositories <span class="count" id="repo-count">0</span></button>
+    <button class="tab" data-tab="timeline">🕒 Journey</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- ===== LEFT COLUMN: PROFILE ===== -->
+    <aside class="sidebar">
+      <img class="avatar" id="avatar" src="" alt="Avatar">
+      <h1 class="name" id="name"></h1>
+      <p class="username" id="username"></p>
+      <p class="bio" id="bio"></p>
+      <a class="btn-follow" id="btn-follow" href="#" target="_blank">Follow</a>
+      <ul class="info" id="info"></ul>
+      <div class="skills" id="skills"></div>
+    </aside>
+
+    <!-- ===== RIGHT COLUMN: CONTENT ===== -->
+    <section class="content">
+
+      <!-- Tab: Overview -->
+      <div class="panel active" id="tab-overview">
+        <div class="readme">
+          <div class="readme-head">📄 README.md</div>
+          <div class="readme-body" id="readme"></div>
+        </div>
+
+        <h2 class="section-title">Pinned</h2>
+        <div class="pinned" id="pinned"></div>
+
+        <h2 class="section-title" id="contrib-title">Activity in the last year</h2>
+        <div class="contrib-box">
+          <div class="contrib-scroll">
+            <div class="contrib-grid" id="contrib-grid"></div>
+          </div>
+          <div class="contrib-legend">
+            Less
+            <span class="cell l0"></span><span class="cell l1"></span><span class="cell l2"></span><span class="cell l3"></span><span class="cell l4"></span>
+            More
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Repositories -->
+      <div class="panel" id="tab-repos">
+        <input class="search" id="search" type="text" placeholder="Find a repository...">
+        <ul class="repo-list" id="repo-list"></ul>
+      </div>
+
+      <!-- Tab: Journey (commit-history style) -->
+      <div class="panel" id="tab-timeline">
+        <ul class="commits" id="commits"></ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    Built with ❤️ using plain HTML/CSS/JS
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
